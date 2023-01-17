@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
     - image: cimg/base:stable
-    - image: cimg/postgres:13.2
+    - image: circleci/postgres:13.2
       environment:
         PGDATA: /dev/shm/pgdata/data
     steps:
