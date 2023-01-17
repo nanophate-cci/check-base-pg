@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
     - image: cimg/base:stable
-    - image: circleci/postgres:13.2
+    - image: cimg/postgres:14.4
       environment:
         PGDATA: /dev/shm/pgdata/data
         POSTGRES_PASSWORD: postgres
