@@ -4,10 +4,12 @@ jobs:
   build:
     docker:
     - image: cimg/base:stable
-    - image: cimg/postgres:14.4
+    - image: cimg/postgres:14.1
       environment:
         PGDATA: /dev/shm/pgdata/data
         POSTGRES_PASSWORD: postgres
+        POSTGRES_USER: postgres
+        POSTGRES_DB: circleci
     steps:
       - checkout
       - run: echo "hello wowwaaa"
