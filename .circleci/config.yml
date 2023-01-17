@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
     - image: cimg/base:stable
-    - image: cimg/postgres:14.4
+    - image: cimg/postgres:11.17
       environment:
         PGDATA: /dev/shm/pgdata/data
     steps:
