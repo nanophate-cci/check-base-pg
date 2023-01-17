@@ -3,10 +3,10 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:stable
-      - image: cimg/postgres:14.4
-       environment:
-         PGDATA: /dev/shm/pgdata/data
+    - image: cimg/base:stable
+    - image: cimg/postgres:14.4
+     environment:
+       PGDATA: /dev/shm/pgdata/data
     steps:
       - checkout
       - run: echo "hello wowwaaa"
