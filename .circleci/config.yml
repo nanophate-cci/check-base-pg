@@ -12,3 +12,4 @@ jobs:
     steps:
       - checkout
       - run: echo "hello wowwaaa"
+      - run: psql -U postgres -h localhost -q -d circle_test -f dump.sql
