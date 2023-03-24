@@ -9,9 +9,7 @@ jobs:
       POSTGRES_USER: postgres
       POSTGRES_DB: circle_test
       POSTGRES_PASSWORD: password
-      PGHOST: 127.0.0.1
     steps:
       - checkout
       - run: echo "hello wowwaaa"
-      - run: psql postgres://postgres:password@localhost/circle_test < dump.sql
       - run: psql -U postgres -h localhost -q -d circle_test -f dump.sql
