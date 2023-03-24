@@ -11,6 +11,6 @@ jobs:
       POSTGRES_PASSWORD: password
     steps:
       - checkout
-      - run: echo "hello wowwaaa"
+      - run: echo "hello wowwaaaaaa"
       - run: psql -U postgres -h localhost -q -d circle_test -c "SELECT * FROM students;"
 #      - run: psql -U postgres -h localhost -q -d circle_test -f dump.sql
