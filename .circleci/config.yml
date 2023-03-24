@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-    - image: cimg/base:stable
+    - image: ubunutu
     - image: cimg/postgres:13.4
     environment:
       POSTGRES_USER: postgres
