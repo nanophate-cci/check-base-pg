@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
     - image: cimg/ruby:3.1.2-browsers
-    - image: cimg/postgres:13.4
+    - image: cimg/postgres:13.7
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: circle_test
@@ -13,4 +13,4 @@ jobs:
       - checkout
       - run: echo "hello wowwaaaaaa"
       - run: psql -U postgres -h localhost -q -d circle_test -c "SELECT * FROM students;"
-      - run: psql -U postgres -h localhost -q -d circle_test -f dump.sql
+#      - run: psql -U postgres -h localhost -q -d circle_test -f dump.sql
